@@ -1,33 +1,42 @@
 # InstallShield Extraction
 
-## Installer
+## Purpose
 
-InstallShield
+This document records the process used to identify and extract files
+from the game's original InstallShield installation media.
 
-## Files
+The goal is to recover the original game files while preserving the
+original filenames and directory structure whenever possible.
 
-data1.cab
-data2.cab
-data1.hdr
+## Installer Technology
 
-## Extraction Tool
+The game uses InstallShield.
 
-Unshield
+Indicators found on the installation media include:
 
-## Status
+- `data1.cab`
+- `data2.cab`
+- `data1.hdr`
+- `ISSetup.dll`
+- `setup.exe`
+- `setup.ini`
+- `setup.inx`
+- `layout.bin`
 
-- Successfully listed archive
-- Successfully extracted
-- Original filenames preserved
+## Installation Media
 
-## Directory Structure
+The original game is distributed as an ISO containing the installation
+media.
 
-Audio/
-Data/
-Maps/
-Textures/
-...
+### Important: Mount vs. Extract
 
-## Notes
+The ISO should preferably be **mounted directly** when running the
+original installer.
 
-No filenames modified.
+During testing, an extraction method converted long filenames into
+DOS 8.3 filenames.
+
+Example:
+
+```text
+background.bmp
